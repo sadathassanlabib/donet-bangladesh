@@ -53,9 +53,5 @@ This app allows users to donate money from their balance, updates the UI instant
 
 ---
 
-## ▶️ How to Run Locally
+## ▶️ Live Link: https://sadathassanlabib.github.io/donet-bangladesh/
 
-```bash
-git clone https://github.com/your-username/donation-app.git
-cd donation-app
-open index.html
