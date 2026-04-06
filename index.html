@@ -72,24 +72,8 @@
             <p class="w-3/4"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
            <input id="card-01-input" type="number" class=" p-4 w-3/4 h-9 " placeholder="Write Donation Amount" name="" id="">
             <br>
-            <button    id="card-01" class="btn   py-2 px-3 rounded-lg  text-black  font-semibold bg-green-400 w-3/4"
+            <button id="card-01" class="btn   py-2 px-3 rounded-lg  text-black  font-semibold bg-green-400 w-3/4"
                        onclick="my_modal_5.showModal()">Donate Now</button>
-            <!-- Open the modal using ID.showModal() method -->
-            
-            <!-- <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-            <div class="modal-box">
-              <h3 class="text-2xl font-bold ">Congrates!</h3>
-              <img src="/assets/coin.png" alt="">
-              <p class="py-4">You Have Donaet for Humankind</p>
-              <h3 class="text-lg font-bold">Successfully</h3>
-            <div class="modal-action">
-            <form method="dialog">
-         
-            <button class="btn">Close Confirmation</button>
-            </form>
-            </div>
-            </div>
-            </dialog> -->
 
             
         </div>
@@ -159,158 +143,8 @@
     <footer class="p-8 bg-black-100 bg-stone-50 h-9"></footer>
 
     
-     <!-- modal part -->
-     
-    <script >
-    
-
-
-
-
-// card-01
-document.getElementById("card-01")
-    .addEventListener( 'click', function(event){
-    event.preventDefault();
-    
-    const feniDonation= document.getElementById("card-01-input").value;
-    const feniCardMoney = document.getElementById("card-01-donation-money").innerText;
-    const feniMoney=parseFloat(feniCardMoney);
-    const feniTotalDonation = parseFloat(feniDonation);
-    const myBlance = document.getElementById("my-balance").innerText;
-    const myTotalBlance= parseFloat(myBlance);
-
-    if( 
-         feniTotalDonation >= myTotalBlance || feniTotalDonation === 0|| feniTotalDonation === "null"  ){ 
-            //document.getElementById("my_modal_5").classList.add("hidden");
-            
-            alert("invalid Number");
-            return
-
-
-
-    }
-  
-    else {
-            
-    const finalfeniMoney= feniTotalDonation+feniMoney
-    document.getElementById("card-01-donation-money").innerText= finalfeniMoney
-
-    // total balance //
-    const myBlance = document.getElementById("my-balance").innerText;
-    const myTotalBlance= parseFloat(myBlance);
-    const myFinalBalance = myTotalBlance-feniTotalDonation;
-    document.getElementById("my-balance" ).innerText= myFinalBalance
-    // history//
-    const historyItem1= document.createElement('div');
-    historyItem1.className= 'bg-slate-50 p-8 mt-9 rounded-lg md-3 border-1-2 border-indigo-500';
-
-    historyItem1.innerHTML= 
-
-    `<p class="">${feniTotalDonation} Taka is Donated for famine-2024 at Feni, Bangladesh </p>
-    <p>${new Date ().toLocaleDateString()};</p>`
-    
-    const historyResult=document.getElementById("history1")
-    historyResult.insertBefore(historyItem1,historyResult.firstChild);
-    }
-})
-
-
-
-
-
-
-
-
-// card-02/
-
-
-document.getElementById("card-02")
-    .addEventListener( 'click', function(event){
-    event.preventDefault();
-
-    
-    const noakhaliDonation= document.getElementById("card-02-input").value;
-    const noakhaliCardMoney = document.getElementById("card-02-donation-money").innerText;
-    const noakhakliMoney=parseFloat(noakhaliCardMoney);
-    const noakhaliTotalDonation = parseFloat(noakhaliDonation);
-
-    const myBlance = document.getElementById("my-balance").innerText;
-    const myTotalBlance= parseFloat(myBlance)
-    if( 
-        noakhaliTotalDonation >= myTotalBlance || noakhaliTotalDonation === 0   ){ 
-       
-           alert("invalid Number")
-
-   }
-   else{
-    const finalNoakhaliMoney= noakhaliTotalDonation+noakhakliMoney
-    document.getElementById("card-02-donation-money").innerText= finalNoakhaliMoney
-    // total balance //
-    const myBlance = document.getElementById("my-balance").innerText;
-    const myTotalBlance= parseFloat(myBlance)
-    const myFinalBalance = myTotalBlance-noakhaliTotalDonation;
-    document.getElementById("my-balance" ).innerText= myFinalBalance
-
-    // history//
-    const historyItem2= document.createElement('div');
-    historyItem2.className= 'bg-slate-50 p-8 mt-9 rounded-lg md-3 border-1-2 border-indigo-500';
-
-    historyItem2.innerHTML= 
-
-    `<p class="">${noakhaliTotalDonation} Taka is Donated for famine-2024 at Noakhali, Bangladesh </p>
-    <p>${new Date ().toLocaleDateString()};</p>`
-    
-    const historyResult=document.getElementById("history1")
-    historyResult.insertBefore(historyItem2,historyResult.firstChild);}
-})
-
-// card-03//
-
-
-document.getElementById("card-03")
-    .addEventListener( 'click', function(event){
-    event.preventDefault();
-    console.log("login button click");
-    const qoutaDonation= document.getElementById("card-03-input").value;
-    const qoutaCardMoney = document.getElementById("card-03-donation-money").innerText;
-    const qoutaMoney=parseFloat(qoutaCardMoney);
-    const qoutaTotalDonation = parseFloat(qoutaDonation);
-    const myBlance = document.getElementById("my-balance").innerText;
-    const myTotalBlance= parseFloat(myBlance)
-
-    if( 
-        qoutaTotalDonation >= myTotalBlance || qoutaTotalDonation === 0   ){ 
-       
-           alert("invalid Number")
-
-   }
-    else{const finalqoutaMoney= qoutaTotalDonation+qoutaMoney
-    document.getElementById("card-03-donation-money").innerText= finalqoutaMoney
-    // total balance //
    
-    const myFinalBalance = myTotalBlance-qoutaTotalDonation;
-    document.getElementById("my-balance" ).innerText= myFinalBalance
-
-    // history//
-    const historyItem3= document.createElement('div');
-    historyItem3.className= 'bg-slate-50 p-8 mt-9 rounded-lg md-3 border-1-2 border-indigo-500';
-
-    historyItem3.innerHTML= 
-
-    `<p class="">${qoutaTotalDonation} Taka is Donated for famine-2024 at Feni, Bangladesh </p>
-    <p>${new Date ().toLocaleDateString()};</p>`
-    
-    const historyResult= document.getElementById("history1")
-    historyResult.insertBefore(historyItem3,historyResult.firstChild);}
-})
-
-
-       
-
- 
-
-
-    </script>
+   
     <script >
       // donation button/
 document.getElementById("Donation").addEventListener(
@@ -367,6 +201,7 @@ document.getElementById("home").addEventListener('click', function(event){
     window.location.href="/index.html";
 })
     </script>
-   
+    <script src="reused.js"></script>
+    <script src="donet.js"></script>
 </body>
 </html>
